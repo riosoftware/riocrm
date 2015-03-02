@@ -1,0 +1,15 @@
+.bs-example data-example-id="striped-table"
+  table.table.table-striped
+    thead
+      tr
+        th #
+        th First Name
+        th Last Name
+        th Username
+    tbody
+      - @contacts.each do | contact |
+        tr
+          th scope="row" 1
+          td contact.first_name
+          td contact.last_name
+          td @contact.email

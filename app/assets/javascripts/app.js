@@ -1,0 +1,1 @@
+@RioCRM = angular.module('RioCRM')
