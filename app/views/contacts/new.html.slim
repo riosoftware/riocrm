@@ -1,27 +1,5 @@
-form id="new_contact" name="new_contact" method="POST" action=="#{contacts_path}"
+form id="new_contact" name="new_contact" method="POST" action="#{contacts_path}"
 
-  .form-group
-    label for="contact[first_name]" First Name
-    input#first_name.form-control name="contact[first_name]" type="text"
-  .form-group
-    label for="contact[last_name]" Last Name
-    input#last_name.form-control name="contact[last_name]" type="text"
-  .form-group
-    label for="title" Title
-    input#title.form-control name="contact[title]" type="text"
-  .form-group
-    label for="contact[email]" Email
-    input#title.form-control name="contact[email]" type="email"
-  .form-group
-    label for="contact[phone_number]" Phone Number
-    input#phone_number.form-control name="contact[phone_number]" type="text"
-  .form-group
-    label for="contact[mobile_number]" Mobile Number
-    input#mobile_number.form-control name="contact[mobile_number]" type="text"
-  .form-group
-    label for="contact[department]" Department
-    input#department.form-control name="contact[department]" type="text"
-
-  = hidden_field_tag :authenticity_token, form_authenticity_token
+  = render 'contacts/contact_details'
 
   button.btn.btn-default type="submit" Submit

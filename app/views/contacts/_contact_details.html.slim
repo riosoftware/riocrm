@@ -1,0 +1,23 @@
+.form-group
+  label for="contact[first_name]" First Name
+  input#first_name.form-control name="contact[first_name]" type="text" value="#{@contact.first_name}"
+.form-group
+  label for="contact[last_name]" Last Name
+  input#last_name.form-control name="contact[last_name]" type="text" value="#{@contact.last_name}"
+.form-group
+  label for="contact[title]" Title
+  input#title.form-control name="contact[title]" type="text" value="#{@contact.title}"
+.form-group
+  label for="contact[email]" Email
+  input#email.form-control name="contact[email]" type="email" value="#{@contact.email}"
+.form-group
+  label for="contact[phone_number]" Phone Number
+  input#phone_number.form-control name="contact[phone_number]" type="text" value="#{@contact.phone_number}"
+.form-group
+  label for="contact[mobile_number]" Mobile Number
+  input#mobile_number.form-control name="contact[mobile_number]" type="text" value="#{@contact.mobile_number}"
+.form-group
+  label for="contact[department]" Department
+  input#department.form-control name="contact[department]" type="text" value="#{@contact.department}"
+
+= render 'shared/authenticity_token'

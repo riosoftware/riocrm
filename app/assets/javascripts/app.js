@@ -1,1 +1,1 @@
-@RioCRM = angular.module('RioCRM')
+var riocrm = angular.module('riocrm')
