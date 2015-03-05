@@ -20,6 +20,8 @@ h3 Contacts List
           td
             = contact.email
           td
+            = link_to 'View', contact_path(contact), class: 'btn btn-info', method: :get
+          td
             = link_to 'Edit', edit_contact_path(contact), class: 'btn btn-primary', method: :get
           td
             = link_to 'Delete', contact_path(contact), class: 'btn btn-danger', method: :delete
