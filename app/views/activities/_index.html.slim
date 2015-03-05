@@ -1,0 +1,28 @@
+.panel.panel-default
+  .panel-heading Activities
+  .panel-body
+    .bs-example data-example-id="striped-table"
+      table.table.table-striped
+        thead
+          tr
+            th Subject
+            th Due Date
+            th Priority
+            th Email
+            th
+        tbody
+          - unless @activities.nil?
+            - @activities.each do | activity |
+              tr
+                td
+                  = activity.subject
+                td
+                  = activity.due_date
+                td
+                  = activity.priority
+                td
+                  = activity.status
+                td
+                  = link_to 'Edit', edit_contact_path(contact), class: 'btn btn-primary', method: :get
+                td
+                  = link_to 'Delete', contact_path(contact), class: 'btn btn-danger', method: :delete

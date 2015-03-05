@@ -1,5 +1,7 @@
 form id="new_contact" name="new_contact" method="POST" action="#{contacts_path}"
 
-  = render 'contacts/contact_details'
+  = render :partial => 'contacts/contact_details', :locals => {:field_disabled => false}
 
-  button.btn.btn-default type="submit" Submit
+  .form-group
+
+    button.btn.btn-default type="submit" Submit

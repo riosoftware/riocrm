@@ -1,23 +1,50 @@
-.form-group
-  label for="contact[first_name]" First Name
-  input#first_name.form-control name="contact[first_name]" type="text" value="#{@contact.first_name}"
-.form-group
-  label for="contact[last_name]" Last Name
-  input#last_name.form-control name="contact[last_name]" type="text" value="#{@contact.last_name}"
-.form-group
-  label for="contact[title]" Title
-  input#title.form-control name="contact[title]" type="text" value="#{@contact.title}"
-.form-group
-  label for="contact[email]" Email
-  input#email.form-control name="contact[email]" type="email" value="#{@contact.email}"
-.form-group
-  label for="contact[phone_number]" Phone Number
-  input#phone_number.form-control name="contact[phone_number]" type="text" value="#{@contact.phone_number}"
-.form-group
-  label for="contact[mobile_number]" Mobile Number
-  input#mobile_number.form-control name="contact[mobile_number]" type="text" value="#{@contact.mobile_number}"
-.form-group
-  label for="contact[department]" Department
-  input#department.form-control name="contact[department]" type="text" value="#{@contact.department}"
+
+.panel.panel-default
+  .panel-heading Contact Info
+  .panel-body
+    .col-md-6
+      .form-group
+        label for="contact[first_name]" First Name
+        input#first_name.form-control name="contact[first_name]" type="text" value="#{@contact.first_name}" disabled==field_disabled
+      .form-group
+        label for="contact[last_name]" Last Name
+        input#last_name.form-control name="contact[last_name]" type="text" value="#{@contact.last_name}" disabled==field_disabled
+      .form-group
+        label for="contact[title]" Title
+        input#title.form-control name="contact[title]" type="text" value="#{@contact.title}" disabled==field_disabled
+      .form-group
+        label for="contact[email]" Email
+        input#email.form-control name="contact[email]" type="email" value="#{@contact.email}" disabled==field_disabled
+    .col-md-6
+      .form-group
+        label for="contact[phone_number]" Phone Number
+        input#phone_number.form-control name="contact[phone_number]" type="text" value="#{@contact.phone_number}" disabled==field_disabled
+      .form-group
+        label for="contact[mobile_number]" Mobile Number
+        input#mobile_number.form-control name="contact[mobile_number]" type="text" value="#{@contact.mobile_number}" disabled==field_disabled
+      .form-group
+        label for="contact[department]" Department
+        input#department.form-control name="contact[department]" type="text" value="#{@contact.department}" disabled==field_disabled
+
+.panel.panel-default
+  .panel-heading Address Info
+  .panel-body
+    .col-md-6
+      .form-group
+        label for="contact[address]" Address
+        input#address.form-control name="contact[address]" type="text" value="#{@contact.address}" disabled==field_disabled
+      .form-group
+        label for="contact[postcode]" Postcode
+        input#postcode.form-control name="contact[postcode]" type="text" value="#{@contact.postcode}" disabled==field_disabled
+      .form-group
+        label for="contact[city]" City
+        input#city.form-control name="contact[city]" type="text" value="#{@contact.city}" disabled==field_disabled
+    .col-md-6
+      .form-group
+        label for="contact[email]" State
+        input#state.form-control name="contact[state]" type="text" value="#{@contact.state}" disabled==field_disabled
+      .form-group
+        label for="contact[country]" Country
+        input#country.form-control name="contact[country]" type="text" value="#{@contact.country}" disabled==field_disabled
 
 = render 'shared/authenticity_token'

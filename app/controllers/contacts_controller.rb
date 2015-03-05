@@ -2,10 +2,16 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
+    @contact.country = 'Australia'
   end
 
   def edit
     @contact = Contact.find(params[:id])
+  end
+
+  def show
+    @contact = Contact.find(params[:id])
+    @activities = @contact.activities
   end
 
   def create
@@ -27,6 +33,13 @@ class ContactsController < ApplicationController
     @contact.phone_number = allowed_params[:phone_number]
     @contact.mobile_number = allowed_params[:mobile_number]
     @contact.department = allowed_params[:department]
+
+    @contact.address = allowed_params[:address]
+    @contact.postcode = allowed_params[:postcode]
+    @contact.city = allowed_params[:city]
+    @contact.state = allowed_params[:state]
+    @contact.country = allowed_params[:country]
+
     @contact.save
     redirect_to contacts_path
   end
@@ -38,7 +51,8 @@ class ContactsController < ApplicationController
   end
 
   def allowed_params
-    params.require(:contact).permit(:id, :first_name, :last_name, :title, :email, :phone_number, :mobile_number, :department)
+    params.require(:contact).permit(:id, :first_name, :last_name, :title, :email, :phone_number, :mobile_number, :department,
+                                    :address, :postcode, :city, :state, :country)
   end
 
 end

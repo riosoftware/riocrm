@@ -1,0 +1,10 @@
+form id="show_contact" name="show_contact" method="POST" action="#{contacts_path}"
+
+  = render :partial => 'contacts/contact_details', :locals => {:field_disabled => true}
+
+  = render :partial => 'activities/index', :locals => {:field_disabled => false}
+
+  /.form-group
+  /
+  /  button.btn.btn-default type="submit" Submit
+

@@ -1,6 +1,6 @@
 form id="edit_contact" name="edit_contact" method="POST" action="#{contact_path}"
 
-  = render 'contacts/contact_details'
+  = render :partial => 'contacts/contact_details', :locals => {:field_disabled => false}
 
   input name="_method" type="hidden" value="patch"
 

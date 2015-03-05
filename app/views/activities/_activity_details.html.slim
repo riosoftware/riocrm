@@ -1,0 +1,19 @@
+.panel.panel-default
+  .panel-heading Activities
+  .panel-body
+    .col-md-6
+      .form-group
+        label for="activity[subject]" Subject
+        input#subject.form-control name="activity[subject]" type="text" value="#{@activity.subject}" disabled==field_disabled
+      .form-group
+        label for="activity[comments]" Comments
+        input#comment.form-control name="activity[comments]" type="text" value="#{@activity.comments}" disabled==field_disabled
+      .form-group
+        label for="activity[due_date]" Due Date
+        input#due_date.form-control name="activity[due_date]" type="text" value="#{@activity.due_date}" disabled==field_disabled
+      .form-group
+        label for="activity[due_date]" Priority
+        input#priority.form-control name="activity[priority]" type="email" value="#{@activity.priority}" disabled==field_disabled
+      .form-group
+        label for="activity[status]" Status
+        input#status.form-control name="activity[status]" type="email" value="#{@activity.status}" disabled==field_disabled
