@@ -29,6 +29,8 @@ Contributing
 Credits
 -------
 
+RioSoftware
+
 License
 -------
 
