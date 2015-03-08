@@ -1,6 +1,8 @@
 RioCRM
 ================
 
+Build Status : https://travis-ci.org/riosoftware/riocrm.svg?branch=master
+
 This application is a CRM implementation built using Ruby on Rails, AngularJS, CoffeeScript and more.
 
 Getting Started
