@@ -16,8 +16,12 @@ Coming soon !
 Issues
 -------------
 
+None.
+
 Similar Projects
 ----------------
+
+SalesForce.com
 
 Contributing
 ------------
@@ -27,3 +31,5 @@ Credits
 
 License
 -------
+
+Coming soon !
