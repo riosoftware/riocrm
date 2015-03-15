@@ -25,6 +25,8 @@
       .form-group
         label for="contact[department]" Department
         input#department.form-control name="contact[department]" type="text" value="#{@contact.department}" disabled==field_disabled
+      .form-group
+        input#contact_id.form-control name="contact[id]" type="hidden" value="#{@contact.id}"
 
 .panel.panel-default
   .panel-heading Address Info

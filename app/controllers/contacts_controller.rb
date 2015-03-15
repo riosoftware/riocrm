@@ -25,22 +25,7 @@ class ContactsController < ApplicationController
   end
 
   def update
-    @contact = Contact.find(params[:id])
-    @contact.first_name = allowed_params[:first_name]
-    @contact.last_name = allowed_params[:last_name]
-    @contact.title = allowed_params[:title]
-    @contact.email = allowed_params[:email]
-    @contact.phone_number = allowed_params[:phone_number]
-    @contact.mobile_number = allowed_params[:mobile_number]
-    @contact.department = allowed_params[:department]
-
-    @contact.address = allowed_params[:address]
-    @contact.postcode = allowed_params[:postcode]
-    @contact.city = allowed_params[:city]
-    @contact.state = allowed_params[:state]
-    @contact.country = allowed_params[:country]
-
-    @contact.save
+    Contact.update_contact_with(allowed_params)
     redirect_to contacts_path
   end
 
@@ -50,9 +35,10 @@ class ContactsController < ApplicationController
     redirect_to contacts_path
   end
 
+  private
   def allowed_params
-    params.require(:contact).permit(:id, :first_name, :last_name, :title, :email, :phone_number, :mobile_number, :department,
-                                    :address, :postcode, :city, :state, :country)
+    params.require(:contact).permit(:first_name, :last_name, :title, :email, :phone_number, :mobile_number, :department,
+                                    :address, :postcode, :city, :state, :country, :id)
   end
 
 end
